@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LjMvP1MnyCXr7ugNgkIi1Q8238uHfJ4MlIRC3+XKJC7CZaNPW2p20Ye5TOiJn4tn6+aPon7mOBoZUJ1087a+xQ==",
+  "dgSpecHash": "VMIRxKNv/W+KZ4WNB3Bm73cxQ5ZyJmQ+llyhjQca9DMBrWm9QIS4PKwV//g8XQByF2npBSgffM2XRN+r9KlNrw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jonas\\source\\repos\\Skolan\\Uppgifter\\Examination\\Westcoast-Education\\EducationApi\\EducationApi.csproj",
+  "projectFilePath": "C:\\Users\\jonas\\source\\repos\\Westcoast-Education\\EducationApi\\EducationApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jonas\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\jonas\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

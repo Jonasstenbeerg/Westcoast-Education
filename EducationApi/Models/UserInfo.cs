@@ -19,7 +19,9 @@ namespace EducationApi.Models
         public string? PhoneNumber { get; set; }
         public int AddressId { get; set; }
         //Navprop
+        [ForeignKey("Id")]
         public Teacher TeacherInfo { get; set; } = new Teacher();
+        [ForeignKey("Id")]
         public Student StudentInfo { get; set; } = new Student();
         [ForeignKey("AddressId")]
         public Address Address { get; set; } = new Address();

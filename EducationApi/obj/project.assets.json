@@ -2610,11 +2610,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jonas\\source\\repos\\Skolan\\Uppgifter\\Examination\\Westcoast-Education\\EducationApi\\EducationApi.csproj",
+      "projectUniqueName": "C:\\Users\\jonas\\source\\repos\\Westcoast-Education\\EducationApi\\EducationApi.csproj",
       "projectName": "EducationApi",
-      "projectPath": "C:\\Users\\jonas\\source\\repos\\Skolan\\Uppgifter\\Examination\\Westcoast-Education\\EducationApi\\EducationApi.csproj",
+      "projectPath": "C:\\Users\\jonas\\source\\repos\\Westcoast-Education\\EducationApi\\EducationApi.csproj",
       "packagesPath": "C:\\Users\\jonas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jonas\\source\\repos\\Skolan\\Uppgifter\\Examination\\Westcoast-Education\\EducationApi\\obj\\",
+      "outputPath": "C:\\Users\\jonas\\source\\repos\\Westcoast-Education\\EducationApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
