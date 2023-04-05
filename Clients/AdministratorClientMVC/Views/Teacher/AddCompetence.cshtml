@@ -1,0 +1,28 @@
+@model AdministratorClientMVC.ViewModels.CreateCompetenceViewModel
+
+@section styles {
+    <link rel="stylesheet" href="~/css/input-page.css">
+}
+
+@{
+    ViewData["Title"] = "Lägg till kompetens";
+}
+
+<div class="form-container">
+    <div class="header-style">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+    <form method="post" class="form-body">
+        <table>
+            <tr>
+                <th><label asp-for="CompetenceName"></label></th>
+                <th><input asp-for="CompetenceName" type="text"></th>
+                <th><span class="validation" asp-validation-for="CompetenceName"></span></th>
+            </tr>
+        </table>
+        <div class="btn-grp">
+            <a asp-controller="Teacher" asp-action="TeacherCompetencies" asp-route-id="@ViewBag.TeacherId" class="btn">Återgå</a>
+            <button type="submit" asp-action="AddCompetence" asp-route-id="@ViewBag.TeacherId" class="btn">Skapa kompetens</button>
+        </div>
+    </form>
+</div>

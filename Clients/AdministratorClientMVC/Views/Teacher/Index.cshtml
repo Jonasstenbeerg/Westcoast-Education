@@ -1,0 +1,60 @@
+@model AdministratorClientMVC.ViewModels.Teacher.TeacherIndexViewModel
+
+@{
+    ViewData["Title"] = "Lärare";
+}
+
+@section styles {
+    <link rel="stylesheet" href="~/css/index-page.css">
+}
+
+<div class="container">
+    <div class="text-center header-style container-header">
+        <a asp-controller="Teacher" asp-action="AddTeacher" class="btn">Lägg till Lärare</a>
+        <h1>@ViewData["Title"]</h1>
+        <form method="post" class="search-container">
+            <select class="header-searchbar" type="text" name="input" id="input">
+                <option value="inget" disabled selected>Filtrera på kompetens</option> @*Submit reagerar inte på detta alternativ genom Javascript*@
+                <option value="alla">Alla kompetenser</option>
+                @foreach (var comp in Model!.Competencies)
+                {
+                    <option value="@comp.CompetenceName">@comp.CompetenceName</option> 
+                }
+            </select>
+                <button class="submit-button" asp-action="Index" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+    <table class="Table-style">
+        <tr class="th-style">
+            <th>LärarId</th>
+            <th>Förnamn</th>
+            <th>Efternamn</th>
+            <th>Email</th>
+            <th>Telefon</th>
+            <th>Uppdatera</th>
+            <th>Info</th>
+            <th>Ta bort</th>
+        </tr>
+        @foreach (var teacher in Model!.Teachers)
+        {
+            <tr class="white-background">
+                <th>@teacher.TeacherId</th>
+                <th>@teacher.FirstName</th>
+                <th>@teacher.LastName</th>
+                <th>@teacher.Email</th>
+                <th>@teacher.PhoneNumber</th>
+                <th><a asp-controller="Teacher" asp-action="Update" asp-route-id="@teacher.TeacherId"><i class="fa-solid fa-pen"></i></a></th>
+                <th><a asp-controller="Teacher" asp-action="Details" asp-route-id="@teacher.TeacherId"><i class="fa-solid fa-info"></i></a></th>
+                <th>
+                    <form method="post" asp-action="Delete" class="delete-form">
+                        <input hidden asp-for="@teacher.TeacherId" name="id" />
+                        <button type="submit" asp-action="Delete"><i class="fa-solid fa-trash-can"></i></button>
+                    </form>
+                </th>
+            </tr>
+        }
+    </table>
+</div>
+@section scripts{
+    <script src="~/js/index.js"></script>
+}

@@ -1,0 +1,50 @@
+@model StudentClientMVC.ViewModels.CourseIndexViewModel
+
+@section styles{ 
+<link rel="stylesheet" href="~/css/courses.css">
+}
+
+@{
+    ViewData["Title"] = "Kurser";
+}
+
+<h1 class="text-center heading">@ViewData["Title"]</h1>
+
+<form id="search-form" method="post">
+    <select type="text" name="input" id="search-select">
+        <option value="inget" disabled selected>Filtrera på kategori</option> @*Submit reagerar inte på detta alternativ genom Javascript*@
+        <option value="alla">Alla kategorier</option>
+        @foreach (var cat in Model!.Categories)
+        {
+           <option value="@cat.CategoryName">@cat.CategoryName</option> 
+        }
+    </select>    
+    <button type="submit" id="search-button">Sök</button>
+</form>
+
+
+<article>
+    <section class="course-collection">
+        @if (!string.IsNullOrEmpty(ViewBag.NotFoundMessage))
+        {
+            <h1 class="text-center heading">@ViewBag.NotFoundMessage</h1>
+        }
+        else
+        {
+           @foreach (var course in Model!.Courses)
+            {
+                <div class="course-card">
+                    <div class="container-header">
+                        <h3>@course.CourseTitle</h3>    
+                    </div>
+                    <p>Kursnummer: @course.CourseNumber | Antal timmar: @course.LenghtInHouers</p>
+                    <a class="btn" asp-action="Details" asp-route-id="@course.CourseNumber">Detaljer</a>
+                </div>
+            } 
+        }
+    </section>
+</article>
+
+@section scripts{
+    <script src="~/js/course-index.js"></script>
+}

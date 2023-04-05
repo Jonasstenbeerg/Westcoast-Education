@@ -1,0 +1,62 @@
+@model AdministratorClientMVC.ViewModels.Student.CreateStudentViewModel
+
+@section styles {
+    <link rel="stylesheet" href="~/css/input-page.css">
+}
+
+@{
+    ViewData["Title"] = "Lägg till student";
+}
+
+<div class="form-container">
+    <div class="header-style">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+    <form method="post" class="form-body">
+        <table>
+            <tr>
+                <th><input hidden type="text" name="id" value="@ViewBag.CourseId"></th>
+            </tr>
+            <tr>
+                <th><label asp-for="@Model!.FirstName"></label></th>
+                <th><input asp-for="@Model!.FirstName" type="text"></th>
+                <th><span class="validation" asp-validation-for="@Model!.FirstName"></span></th>
+                
+            </tr>
+            <tr>
+                <th><label asp-for="@Model!.LastName"></label></th>
+                <th><input asp-for="@Model!.LastName" type="text"></th>
+                <th><span class="validation" asp-validation-for="@Model!.LastName"></span></th>
+            </tr>
+            <tr>
+                <th><label asp-for="@Model!.Email"></label></th>
+                <th><input asp-for="@Model!.Email" type="text"></th>
+                <th><span class="validation" asp-validation-for="@Model!.Email"></span></th>
+            </tr>
+            <tr>
+                <th><label asp-for="@Model!.PhoneNumber"></label></th>
+                <th><input asp-for="@Model!.PhoneNumber" type="text"></th>
+                <th><span class="validation" asp-validation-for="@Model!.PhoneNumber"></span></th>
+            </tr>
+            <tr>
+                <th><label asp-for="@Model!.StreetName"></label></th>
+                <th><input asp-for="@Model!.StreetName" type="text"></th>
+                <th><span class="validation" asp-validation-for="@Model!.StreetName"></span></th>
+            </tr>
+            <tr>
+                <th><label asp-for="@Model!.StreetNumber"></label></th>
+                <th><input asp-for="@Model!.StreetNumber" type="text"></th>
+                <th><span class="validation" asp-validation-for="@Model!.StreetNumber"></span></th>
+            </tr>
+            <tr>
+                <th><label asp-for="@Model!.Zipcode"></label></th>
+                <th><input asp-for="@Model!.Zipcode" type="text"></th>
+                <th><span class="validation" asp-validation-for="@Model!.Zipcode"></span></th>
+            </tr>
+        </table>
+        <div class="btn-grp">
+            <a asp-controller="Student" asp-action="Index" class="btn">Återgå</a>
+            <button type="submit" class="btn">Skapa student</button>
+        </div>
+    </form>
+</div>

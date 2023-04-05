@@ -1,0 +1,42 @@
+@model List<AdministratorClientMVC.ViewModels.Teacher.TeacherInCourseViewModel>
+
+@section styles {
+    <link rel="stylesheet" href="~/css/input-page.css">
+}
+
+@{
+    ViewData["Title"] = "Tilldela lärare";
+    
+}
+
+<div class="form-container">
+    <div class="header-style">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+    <form method="post" class="form-body">
+        <table id="form-table">
+            <tr>
+                <th><input hidden type="text" name="courseId" value="@ViewBag.CourseId"></th>
+                <th><input hidden type="text" id="teacherId" name="teacherId"></th>
+            </tr>
+            
+                @for (int i = 0; i < Model!.Count(); i++)
+                {
+                    <tr>
+                        <input hidden asp-for="@Model![i].TeacherFullName">
+                        <input hidden asp-for="@Model![i].TeacherId">
+                        <th><label asp-for="@Model![i].TeacherFullName">@Model![i].TeacherFullName</label></th>
+                        <th><input asp-for="@Model![i].IsInCourse" name="radio-grp" class="radiobutton" type="radio" checked="@Model![i].IsInCourse" value="@Model![i].TeacherId"></th>
+                    </tr>
+                }
+            
+        </table>
+        <div class="btn-grp">
+            <a asp-controller="Course" asp-action="Update" asp-route-id="@ViewBag.CourseId" class="btn">Återgå</a>
+            <button type="submit" class="btn">Uppdatera</button>
+        </div>
+    </form>
+</div>
+@section scripts{
+    <script src="~/js/course-teacher.js"></script>
+}

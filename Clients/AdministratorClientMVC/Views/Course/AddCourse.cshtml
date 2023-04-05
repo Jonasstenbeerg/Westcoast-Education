@@ -1,0 +1,49 @@
+@model AdministratorClientMVC.ViewModels.Course.CreateCourseViewModel
+
+@section styles {
+    <link rel="stylesheet" href="~/css/input-page.css">
+}
+
+@{
+    ViewData["Title"] = "Lägg till kurs";
+}
+
+<div class="form-container">
+    <div class="header-style">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+    <form method="post" class="form-body">
+        <table>
+            <tr>
+                <th><label asp-for="CourseTitle"></label></th>
+                <th><input asp-for="CourseTitle" type="text"></th>
+                <th><span class="validation" asp-validation-for="CourseTitle"></span></th>
+                
+            </tr>
+            <tr>
+                <th><label asp-for="LenghtInHouers"></label></th>
+                <th><input asp-for="LenghtInHouers" type="text"></th>
+                <th><span class="validation" asp-validation-for="LenghtInHouers"></span></th>
+            </tr>
+            <tr>
+                <th><label asp-for="CourseDetails"></label></th>
+               <th><textarea asp-for="CourseDetails" cols="23" rows="4" >@Model!.CourseDetails</textarea></th>
+                <th><span class="validation" asp-validation-for="CourseDetails"></span></th>
+            </tr>
+            <tr>
+                <th><label asp-for="Description"></label></th>
+                <th><textarea asp-for="Description" cols="23" rows="4" >@Model!.Description</textarea></th>
+                <th><span class="validation" asp-validation-for="Description"></span></th>
+            </tr>
+            <tr>
+                <th><label asp-for="CategoryName"></label></th>
+                <th><input asp-for="CategoryName" type="text"></th>
+                <th><span class="validation" asp-validation-for="CategoryName"></span></th>
+            </tr>
+        </table>
+        <div class="btn-grp">
+            <a asp-controller="Course" asp-action="Index" class="btn">Återgå</a>
+            <button type="submit" class="btn">Skapa kurs</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,82 @@
+td, th {
+    border: 1px solid #ddd;
+    background-color: white;
+    padding: 8px;
+  }
+
+.container {
+    overflow: hidden;
+    margin: 5rem 3rem;
+    border-radius: 5px;
+  }
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.container-header a,input {
+    margin: 0 1rem;
+}
+
+.search-container select {
+    height: 100%;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+   
+  }
+  
+  .search-container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .search-container button {
+    float: left;
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    background: var(--filter-button-color);
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; 
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .search-container {
+    position: relative;
+    margin: 0 1rem;
+    width: 400px;
+  }
+  
+  .search-logo {
+    left: 2rem;
+    bottom: 1rem;
+    position: absolute;
+    color: black;
+    float: right;
+  }
+  
+  .delete-form button {
+    color: rgb(255, 0, 0);
+    border: none;
+    cursor: pointer;
+  }
+
+  .th-style th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: var(--table-header-color);
+    color: white;
+  }

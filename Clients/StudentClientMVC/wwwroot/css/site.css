@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('/img/sunset-1807524.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  background: var(--main-color);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+#navbar a {
+  text-decoration: none;
+  margin-right: 2rem;
+  font-size: larger;
+  color: var(--text-color);
+  font-family: 'Indie Flower', sans-serif;
+}
+
+#navbar .logo {
+  margin-left: 2rem;
+  font-size: xx-large;
+  color: var(--logo-color)
+}
+
+.text-center {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.heading {
+  font-size: xx-large;
+  color: var(--text-color);
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.8rem;
+  color: black;
+  border: 1px solid black;
+  background-color: rgb(211, 216, 216);
+  border-radius: 10px;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.container-header {
+  text-align: center;
+  background: var(--main-color);
+  padding: 1rem 0;
+  color: var(--text-color);
+}

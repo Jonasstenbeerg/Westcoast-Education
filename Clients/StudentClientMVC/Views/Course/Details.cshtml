@@ -1,0 +1,55 @@
+@model StudentClientMVC.ViewModels.CourseViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@section styles{
+    <link rel="stylesheet" href="~/css/details.css">
+}
+
+@{
+    ViewData["Title"] = "Detaljer";
+}
+
+<div class="form-container">
+    <div class="container-header">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+    <div class="form-body">
+        <table>
+            <tr>
+                <th><label asp-for="CourseTitle"></label></th>
+                <th><input asp-for="CourseTitle" type="text" value="@Model!.CourseTitle" disabled></th>
+            </tr>
+            <tr>
+                <th><label asp-for="CourseNumber"></label></th>
+                <th><input asp-for="CourseNumber" type="text" value="@Model.CourseNumber" disabled></th>     
+            </tr>
+            <tr>
+                <th><label asp-for="CategoryName"></label></th>
+                <th><input asp-for="CategoryName" type="text" value="@Model.CategoryName" disabled></th>
+            </tr>
+            <tr>
+                <th><label asp-for="LenghtInHouers"></label></th>
+                <th><input asp-for="LenghtInHouers" type="text" value="@Model.LenghtInHouers" disabled></th>
+            </tr>
+            <tr>
+                <th><label asp-for="TeacherFullName"></label></th>
+                <th><input asp-for="TeacherFullName" type="text" value="@Model.TeacherFullName" disabled></th>
+            </tr>
+            <tr>
+                <th><label asp-for="@Model.CourseDetails"></label></th>
+                <th><textarea cols="23" rows="4" disabled>@Model.CourseDetails</textarea></th>     
+            </tr>
+            <tr>
+                <th><label asp-for="@Model.Description"></label></th>
+                <th><textarea cols="23" rows="4" disabled>@Model.Description</textarea></th>     
+            </tr>
+        </table>
+        <div class="btn-grp">
+            <a class="btn" asp-controller="Student" asp-action="Signup" asp-route-courseId="@Model.CourseNumber">Sök till kurs</a>
+            <a class="btn" asp-controller="Course" asp-action="Index">Återgå</a>
+        </div>
+    </div>
+</div>
+
+
+

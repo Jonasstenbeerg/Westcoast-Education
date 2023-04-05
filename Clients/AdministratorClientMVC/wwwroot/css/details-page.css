@@ -1,0 +1,30 @@
+.container-small Table {
+    margin: 1rem;
+   height: 100%;
+}
+
+.container-small a {
+   padding: 0.5rem 3rem;
+}
+  
+.container-small table, tr, th{
+    border: 2px solid white;
+    padding: 8px;
+}
+
+.container-small {
+    overflow: hidden;
+    margin: 5rem auto;
+    width: 40rem;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.th-btn {
+    padding: 1rem;
+    float: left;
+}
+
+.Table-style textarea {
+    resize: none;
+  }

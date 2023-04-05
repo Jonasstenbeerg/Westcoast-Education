@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/utilities.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/fontawesome/css/all.css">
+    @RenderSection("styles",false)
+    <title>@ViewData["Title"] - Westcoast Education</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <h1 class="logo"><i class="fa-solid fa-graduation-cap"></i>Westcoast Education</h1>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Start</a></li>
+                <li><a asp-controller="Course" asp-action="Index">Kurser</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main>
+            @RenderBody()
+        </main>
+    <footer>
+
+    </footer>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts",false)
+</body>
+</html>

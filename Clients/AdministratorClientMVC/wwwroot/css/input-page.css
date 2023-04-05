@@ -1,0 +1,48 @@
+table {
+    border-spacing: 0 1.8rem;
+    
+}
+th {
+    width: 43%;
+    border: 2px solid white
+}
+.btn-grp > * {
+    width: 20%;
+}
+.form-body input {
+    border-radius: 8px;
+    float: left;
+    width: 60%;
+    height: 1.5rem;
+    padding: 0.5rem;
+}
+.form-container {
+    background-color: white;
+    border: 1px solid black;
+    align-items: center;
+    width: 800px;
+    height: 100%;
+    margin: 50px auto 50px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.form-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.btn-grp {
+    display: flex;
+    justify-content: space-around;
+}
+.validation {
+    transform: translateX(-75%);
+    position: absolute;
+    color: red;
+    font-size: x-small;
+}
+.form-body textarea {
+    resize: none;
+    float: left;
+    padding: 0.5rem;
+  }

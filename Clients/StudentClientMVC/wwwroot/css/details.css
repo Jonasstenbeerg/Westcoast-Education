@@ -1,0 +1,30 @@
+table {
+    border-spacing: 0 1.2rem;
+}
+textarea {
+    resize: none;
+}
+.form-container {
+    background-color: white;
+    border: 1px solid black;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto 5rem auto;
+    height: inherit;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: translateY(15%);
+}
+.form-body {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+.btn-grp {
+    display: flex;
+    justify-content: space-between;
+}
+.validation {
+    color: red;
+    font-size: x-small;
+}

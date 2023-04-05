@@ -1,0 +1,52 @@
+@model AdministratorClientMVC.ViewModels.Course.CourseViewModel
+@{
+    ViewData["Title"] = "Detaljer";
+}
+
+@section styles {
+    <link rel="stylesheet" href="~/css/details-page.css">
+}
+
+
+<div class="container-small">
+    <div class="text-center header-style">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+    <div>
+        <table class="Table-style">
+            <tr>
+                <th><label asp-for="CourseNumber"></label></th>
+                <th><input asp-for="CourseNumber" type="text" value="@Model!.CourseNumber"disabled></th>
+            </tr>
+            <tr>
+                <th><label asp-for="CourseTitle"></label></th>
+                <th><input asp-for="CourseTitle" type="text" value="@Model.CourseTitle"disabled></th>     
+            </tr>
+            <tr>
+                <th><label asp-for="LenghtInHouers"></label></th>
+                <th><input asp-for="LenghtInHouers" type="text" value="@Model.LenghtInHouers"disabled></th>
+            </tr>
+            <tr>
+                <th><label asp-for="CategoryName"></label></th>
+                <th><input asp-for="CategoryName" type="text" value="@Model.CategoryName"disabled></th>
+            </tr>
+            <tr>
+                <th><label asp-for="TeacherFullName"></label></th>
+                <th><input asp-for="TeacherFullName" type="text" value="@Model.TeacherFullName"disabled></th>
+            </tr>
+            <tr>
+                <th><label asp-for="CourseDetails"></label></th>
+                <th><textarea cols="23" rows="4" disabled>@Model.CourseDetails</textarea></th>     
+            </tr>
+            <tr>
+                <th><label asp-for="Description"></label></th>
+                <th><textarea cols="23" rows="4" disabled>@Model.Description</textarea></th>     
+            </tr>
+            <tr>
+                <th class="th-btn"><a class="btn" asp-controller="Course" asp-action="Index">Återgå</a></th>
+                <th></th>
+            </tr>
+        </table>
+        
+    </div>
+</div>

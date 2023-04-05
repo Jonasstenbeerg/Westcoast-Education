@@ -1,0 +1,38 @@
+@model List<AdministratorClientMVC.ViewModels.AsignCompetenceViewModel>
+
+@section styles {
+    <link rel="stylesheet" href="~/css/input-page.css">
+}
+
+@{
+    ViewData["Title"] = "Tilldela kompetens";
+    
+}
+
+<div class="form-container">
+    <div class="header-style">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+    <form method="post" class="form-body">
+        <table id="form-table">
+            <tr>
+                <th><input hidden type="text" id="teacherId" value="@ViewBag.TeacherId" name="id"></th>
+            </tr>
+            
+                @for (int i = 0; i < Model!.Count(); i++)
+                {
+                    <tr>
+                        <th><label asp-for="@Model![i].CompetenceName">@Model![i].CompetenceName</label></th>
+                        <th><input asp-for="@Model![i].HasCompetence" type="checkbox"></th>
+                        <th><input hidden type="text" asp-for="@Model![i].CompetenceName"></th>
+                    </tr>
+                }
+            
+        </table>
+        <div class="btn-grp">
+            <a asp-controller="Teacher" asp-action="Update" asp-route-id="@ViewBag.TeacherId" class="btn">Återgå</a>
+            <a asp-controller="Teacher" asp-action="AddCompetence" asp-route-id="@ViewBag.TeacherId" class="btn">Skapa kompetense</a>
+            <button type="submit" asp-action="TeacherCompetencies" asp-route-id="@ViewBag.TeacherId" class="btn">Uppdatera</button>
+        </div>
+    </form>
+</div>

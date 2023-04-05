@@ -1,0 +1,61 @@
+@model StudentClientMVC.ViewModels.CourseSignupViewModel
+
+@section styles{
+    <link rel="stylesheet" href="~/css/signup.css">
+}
+
+@{
+    ViewData["Title"] = "Personuppgifter";
+}
+
+
+
+<div class="form-container">
+    <div class="container-header">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+    <form method="post" class="form-body">
+        <table>
+            <tr>
+                <th><input hidden type="text" name="id" value="@ViewBag.CourseId"></th>
+            </tr>
+            <tr>
+                <th><label asp-for="@Model!.FirstName"></label></th>
+                <th><input asp-for="@Model!.FirstName" type="text"></th>
+                <th><span class="validation" asp-validation-for="@Model!.FirstName"></span></th>
+                
+            </tr>
+            <tr>
+                <th><label asp-for="@Model!.LastName">Efternamn</label></th>
+                <th><input asp-for="@Model!.LastName" type="text"></th>
+                <th><span class="validation" asp-validation-for="@Model!.LastName"></span></th>
+            </tr>
+            <tr>
+                <th><label asp-for="@Model!.Email">Email</label></th>
+                <th><input asp-for="@Model!.Email" type="text"></th>
+                <th><span class="validation" asp-validation-for="@Model!.Email"></span></th>
+            </tr>
+            <tr>
+                <th><label asp-for="@Model!.PhoneNumber">Telefonnummer</label></th>
+                <th><input asp-for="@Model!.PhoneNumber" type="text"></th>
+                <th><span class="validation" asp-validation-for="@Model!.PhoneNumber"></span></th>
+            </tr>
+            <tr>
+                <th><label asp-for="@Model!.StreetName">Gatunamn</label></th>
+                <th><input asp-for="@Model!.StreetName" type="text"></th>
+                <th><span class="validation" asp-validation-for="@Model!.StreetName"></span></th>
+            </tr>
+            <tr>
+                <th><label asp-for="@Model!.StreetNumber">Gatunummer</label></th>
+                <th><input asp-for="@Model!.StreetNumber" type="text"></th>
+                <th><span class="validation" asp-validation-for="@Model!.StreetNumber"></span></th>
+            </tr>
+            <tr>
+                <th><label asp-for="@Model!.Zipcode">Postnummer</label></th>
+                <th><input asp-for="@Model!.Zipcode" type="text"></th>
+                <th><span class="validation" asp-validation-for="@Model!.Zipcode"></span></th>
+            </tr>
+        </table>
+        <button class="btn">Ansök</button>
+    </form>
+</div>
