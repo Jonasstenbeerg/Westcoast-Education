@@ -1,2 +1,2 @@
 # Westcoast-Education
-Two ASP.NET core web app projects with mvc pattern that handles frontend and one ASP.NET core web api project for backend that uses repository pattern and SQLite.
+Two ASP.NET Core Web App projects with MVC pattern that handles frontend and one ASP.NET Core Web API(RESTful standard) project for backend that uses repository pattern and SQLite.
