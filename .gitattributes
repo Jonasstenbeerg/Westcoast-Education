@@ -1,2 +1,1 @@
-*.scss linguist-vendored
-*.less linguist-vendored
+Fontawesome/** linguist-vendored
