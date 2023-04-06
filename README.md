@@ -11,3 +11,11 @@ dotnet tool install --global dotnet-ef
 ```sh
 dotnet ef database update
 ```
+
+# Common issues
+ 1 Not trusted SSL certificate for localhost
+  * The issue gets resolved by running
+```sh
+dotnet dev-certs https --clean;
+dotnet dev-certs https --trust;
+```
